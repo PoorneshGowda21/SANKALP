@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faculty Programs Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #1a237e;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    .login-buttons button {
+      margin-left: 1rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #3949ab;
+      color: white;
+      cursor: pointer;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #5c6bc0, #7986cb);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .counter {
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    .programs-section {
+      padding: 2rem;
+    }
+
+    .programs-section h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 per row */
+      gap: 1.5rem;
+    }
+
+    .program-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      transition: transform 0.2s;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .program-card:hover {
+      transform: translateY(-5px);
+      background-color: #eef2ff;
+    }
+
+    .program-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #1a237e;
+    }
+
+    .program-card .tag {
+      display: inline-block;
+      background-color: #ddd;
+      color: #333;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+
+    .program-card .count {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #3949ab;
+      margin-bottom: 0.5rem;
+    }
+
+    .program-card .desc {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .program-card button {
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #3949ab;
+      color: white;
+      cursor: pointer;
+    }
+
+    .upload-section {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .upload-section a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #3949ab;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    .upload-section a:hover {
+      background-color: #303f9f;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #1a237e;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Faculty Programs Portal</h1>
+    <div class="login-buttons">
+      <button onclick="location.href='admin-login.html'">Admin Login</button>
+      <button onclick="location.href='teacher-login.html'">Teacher Login</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Total Programs Conducted</h2>
+    <div class="counter" id="programCounter">0</div>
+  </section>
+
+  <section class="programs-section">
+    <h2>Faculty Programs & Activities</h2>
+    <div class="programs-grid">
+      <!-- 6 Cards in total, 3 per row -->
+      <div class="program-card">
+        <span class="tag">Research</span>
+        <div class="count">142</div>
+        <h3>Research Publications</h3>
+        <div class="desc">Latest research papers and publications by our faculty members</div>
+        <button>View Details</button>
+      </div>
+      <div class="program-card">
+        <span class="tag">Academic</span>
+        <div class="count">89</div>
+        <h3>Conference Proceedings</h3>
+        <div class="desc">International and national conference presentations</div>
+        <button>View Details</button>
+      </div>
+      <div class="program-card">
+        <span class="tag">Events</span>
+        <div class="count">67</div>
+        <h3>Workshops & Seminars</h3>
+        <div class="desc">Educational workshops and seminars conducted</div>
+        <button>View Details</button>
+      </div>
+      <div class="program-card">
+        <span class="tag">Development</span>
+        <div class="count">54</div>
+        <h3>FDP Attended</h3>
+        <div class="desc">Faculty Development Programs attended by the staff</div>
+        <button>View Details</button>
+      </div>
+      <div class="program-card">
+        <span class="tag">Training</span>
+        <div class="count">38</div>
+        <h3>Technical Trainings</h3>
+        <div class="desc">Technical sessions and training courses completed</div>
+        <button>View Details</button>
+      </div>
+      <div class="program-card">
+        <span class="tag">Achievements</span>
+        <div class="count">25</div>
+        <h3>Awards & Honors</h3>
+        <div class="desc">Recognitions and awards received by our faculty</div>
+        <button>View Details</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="upload-section">
+    <a href="upload-program.html">Upload Your Work / Project / Research</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Faculty Programs Portal - All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // Simple counter animation
+    const counter = document.getElementById('programCounter');
+    let count = 0;
+    const total = 6;
+
+    const interval = setInterval(() => {
+      if (count < total) {
+        count++;
+        counter.innerText = count;
+      } else {
+        clearInterval(interval);
+      }
+    }, 200);
+  </script>
+</body>
+</html>

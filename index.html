@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faculty Programs Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #f9fbfd;
+      color: #333;
+      padding: 2rem;
+    }
+
+    header {
+      background-color: #1a237e;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    .login-buttons button {
+      margin-left: 1rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #3949ab;
+      color: white;
+      cursor: pointer;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 2rem 0 0.5rem;
+      font-size: 2rem;
+    }
+
+    p.subtitle {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: 12px;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .research { background-color: #e8f0fe; color: #1a73e8; }
+    .academic { background-color: #e6f4ea; color: #137333; }
+    .events { background-color: #f3e8fd; color: #9333ea; }
+    .achievement { background-color: #fff8e1; color: #f9a825; }
+    .publication { background-color: #fdecea; color: #d32f2f; }
+
+    .count {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .desc {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .details-btn {
+      padding: 0.5rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: #fff;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .details-btn:hover {
+      background-color: #f0f0f0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #1a237e;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Faculty Programs Portal</h1>
+    <div class="login-buttons">
+      <button onclick="location.href='admin-login.html'">Admin Login</button>
+      <button onclick="location.href='teacher-login.html'">Teacher Login</button>
+    </div>
+  </header>
+
+  <h2>Faculty Programs & Activities</h2>
+  <p class="subtitle">Explore our comprehensive collection of academic and research programs</p>
+
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-title">Research Publications</div>
+      <span class="badge research">Research</span>
+      <div class="count">142</div>
+      <div class="desc">Latest research papers and publications by our faculty members</div>
+      <div class="details-btn">View Details</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Conference Proceedings</div>
+      <span class="badge academic">Academic</span>
+      <div class="count">89</div>
+      <div class="desc">International and national conference presentations</div>
+      <div class="details-btn">View Details</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Workshops & Seminars</div>
+      <span class="badge events">Events</span>
+      <div class="count">67</div>
+      <div class="desc">Educational workshops and seminars conducted</div>
+      <div class="details-btn">View Details</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Awards & Recognition</div>
+      <span class="badge achievement">Achievement</span>
+      <div class="count">34</div>
+      <div class="desc">Faculty achievements and institutional recognitions</div>
+      <div class="details-btn">View Details</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Book Publications</div>
+      <span class="badge publication">Publication</span>
+      <div class="count">28</div>
+      <div class="desc">Books and chapters published by faculty</div>
+      <div class="details-btn">View Details</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Student Projects</div>
+      <span class="badge academic">Academic</span>
+      <div class="count">156</div>
+      <div class="desc">Undergraduate and postgraduate research projects</div>
+      <div class="details-btn">View Details</div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Faculty Programs Portal - All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
